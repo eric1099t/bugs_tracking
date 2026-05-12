@@ -45,25 +45,25 @@ You can also use `curl` for testing directly from your terminal. *(Tip: Append `
 
 -   **Check if the API is running (Root endpoint):**
     ```bash
-    curl [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+    curl http://127.0.0.1:8000/
     ```
 
 ### 2. Reading Bug Data (GET)
 
 -   **Retrieve the list of ALL bugs in the system:**
     ```bash
-    curl [http://127.0.0.1:8000/api/bugs](http://127.0.0.1:8000/api/bugs)
+    curl http://127.0.0.1:8000/api/bugs
     ```
 
 -   **Retrieve Actionable Bugs:**
     *(Returns only CRITICAL bugs that are currently OPEN or IN_PROGRESS and exports a report).*
     ```bash
-    curl [http://127.0.0.1:8000/actionable-bugs](http://127.0.0.1:8000/actionable-bugs)
+    curl http://127.0.0.1:8000/actionable-bugs
     ```
 
 -   **Get the total count of CRITICAL bugs:**
     ```bash
-    curl [http://127.0.0.1:8000/critical-bugs/count](http://127.0.0.1:8000/critical-bugs/count)
+    curl http://127.0.0.1:8000/critical-bugs/count
     ```
 
 ### 3. Managing Bugs (POST, PUT, DELETE)
@@ -71,7 +71,7 @@ You can also use `curl` for testing directly from your terminal. *(Tip: Append `
 -   **Create a new Bug (POST):**
     *(You must provide at least a `ticket_id` in the JSON body).*
     ```bash
-    curl -X POST [http://127.0.0.1:8000/add-bug](http://127.0.0.1:8000/add-bug) \
+    curl -X POST http://127.0.0.1:8000/add-bug \
          -H "Content-Type: application/json" \
          -d '{"ticket_id": "BUG-123", "severity": "CRITICAL", "status": "OPEN"}'
     ```
@@ -79,7 +79,7 @@ You can also use `curl` for testing directly from your terminal. *(Tip: Append `
 -   **Update an existing Bug's status (PUT):**
     *(Replace `BUG-123` in the URL with the ID you want to update).*
     ```bash
-    curl -X PUT [http://127.0.0.1:8000/api/bugs/BUG-123](http://127.0.0.1:8000/api/bugs/BUG-123) \
+    curl -X PUT http://127.0.0.1:8000/api/bugs/BUG-123 \
          -H "Content-Type: application/json" \
          -d '{"ticket_id": "BUG-123", "new_status": "CLOSED"}'
     ```
@@ -87,5 +87,5 @@ You can also use `curl` for testing directly from your terminal. *(Tip: Append `
 -   **Delete a Bug (DELETE):**
     *(Permanently removes the bug from the system and updates `jira_data.json`).*
     ```bash
-    curl -X DELETE [http://127.0.0.1:8000/api/bugs/BUG-123](http://127.0.0.1:8000/api/bugs/BUG-123)
+    curl -X DELETE http://127.0.0.1:8000/api/bugs/BUG-123
     ```
