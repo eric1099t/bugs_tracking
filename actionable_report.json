@@ -1,0 +1,12 @@
+[
+    {
+        "ticket_id": "BUG-101",
+        "severity": "CRITICAL",
+        "status": "OPEN"
+    },
+    {
+        "ticket_id": "BUG-101",
+        "severity": "CRITICAL",
+        "status": "OPEN"
+    }
+]

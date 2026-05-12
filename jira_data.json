@@ -1,0 +1,52 @@
+[
+    {
+        "ticket_id": "BUG-101",
+        "severity": "CRITICAL",
+        "status": "OPEN"
+    },
+    {
+        "ticket_id": "BUG-102",
+        "severity": "HIGH",
+        "status": "RESOLVED"
+    },
+    {
+        "ticket_id": "BUG-103",
+        "severity": "UNKNOWN",
+        "status": "OPEN"
+    },
+    {
+        "ticket_id": "BUG-123",
+        "severity": "LOW",
+        "status": "OPEN"
+    },
+    {
+        "ticket_id": "BUG-999",
+        "severity": "HIGH",
+        "status": "IN-PROGRESS"
+    },
+    {
+        "ticket_id": "BUG-101",
+        "severity": "CRITICAL",
+        "status": "OPEN"
+    },
+    {
+        "ticket_id": "BUG-102",
+        "severity": "HIGH",
+        "status": "RESOLVED"
+    },
+    {
+        "ticket_id": "BUG-103",
+        "severity": "UNKNOWN",
+        "status": "OPEN"
+    },
+    {
+        "ticket_id": "BUG-123",
+        "severity": "LOW",
+        "status": "OPEN"
+    },
+    {
+        "ticket_id": "BUG-999",
+        "severity": "HIGH",
+        "status": "IN-PROGRESS"
+    }
+]
