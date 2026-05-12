@@ -31,10 +31,12 @@ Make sure you have Python installed on your machine. You will also need to insta
 
 ```bash
 pip install fastapi uvicorn pydantic
+```
+
 
 The API will be available at http://127.0.0.1:8000.
+
 
 Interactive API Docs
 Once the server is running, you can test all endpoints directly from your browser by visiting:
 👉 http://127.0.0.1:8000/docs
-
