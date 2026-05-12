@@ -52,7 +52,7 @@ You can also use `curl` for testing directly from your terminal. *(Tip: Append `
 
 -   **Retrieve the list of ALL bugs in the system:**
     ```bash
-    curl http://127.0.0.1:8000/api/bugs
+    curl http://127.0.0.1:8000/all_bugs
     ```
 
 -   **Retrieve Actionable Bugs:**
