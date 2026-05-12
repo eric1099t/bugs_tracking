@@ -79,7 +79,7 @@ You can also use `curl` for testing directly from your terminal. *(Tip: Append `
 -   **Update an existing Bug's status (PUT):**
     *(Replace `BUG-123` in the URL with the ID you want to update).*
     ```bash
-    curl -X PUT http://127.0.0.1:8000/api/bugs/BUG-123 \
+    curl -X PUT http://127.0.0.1:8000/bugs/BUG-123 \
          -H "Content-Type: application/json" \
          -d '{"ticket_id": "BUG-123", "new_status": "CLOSED"}'
     ```

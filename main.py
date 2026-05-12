@@ -20,6 +20,7 @@ class CreateBugRequest(BaseModel):
 class UpdateBugStatusRequest(BaseModel):
     ticket_id: str
     new_status: str
+    new_severity: str
 
 @app.get("/")
 def read_root():
@@ -48,16 +49,16 @@ def add_bug(payload: CreateBugRequest):
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
     
-@app.put("/api/bugs/{ticket_id}")
+@app.put("/bugs/{ticket_id}")
 def update_bug(ticket_id: str, payload: UpdateBugStatusRequest):
     try:
-        updated_bug_data = tracker.update_bug(ticket_id=ticket_id, status=payload.new_status)
+        updated_bug_data = tracker.update_bug(ticket_id=ticket_id, status=payload.new_status, severity=payload.new_severity)
         tracker.save_to_json(data_file)
         return {"message": "Bug status updated successfully.", "bug": updated_bug_data}
     except ValueError as e:
         raise HTTPException(status_code=404, detail=str(e))
         
-@app.delete("/api/bugs/{ticket_id}")
+@app.delete("/bugs/{ticket_id}")
 def delete_bug(ticket_id: str):
     try:
         delete_endpoint = tracker.delete_bug(ticket_id=ticket_id)

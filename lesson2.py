@@ -133,7 +133,7 @@ class BugTracker:
         self.bug.append(new_bug)
         return {"ticket_id": new_bug.ticket_id, "severity": new_bug.severity, "status": new_bug.status} 
 
-    def update_bug(self, ticket_id: str, severity: str = None, status: str = None) -> dict:
+    def update_bug(self, ticket_id: str, severity: str, status: str) -> dict:
         for b in self.bug:
             if b.ticket_id == ticket_id:
                 if severity is not None:

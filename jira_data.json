@@ -17,7 +17,7 @@
     {
         "ticket_id": "BUG-123",
         "severity": "LOW",
-        "status": "OPEN"
+        "status": "RESOLVED"
     },
     {
         "ticket_id": "BUG-999",
